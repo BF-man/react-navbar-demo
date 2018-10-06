@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
-import logoBlack from './images/logo-black.png';
+import React, { Component } from 'react'
+import { Link } from "./components/Link"
+import logoBlack from './images/logo-black.png'
 import { css } from 'emotion'
 
 const navbar = css`
@@ -8,17 +9,13 @@ const navbar = css`
   margin: 0 auto;
   align-items: center;
   height: 4.5rem;
-`;
+`
 
 const navigation = css`
   display: flex;
   margin: 0 auto 0 7.8rem;
-`;
-
-const navItem = css`
-  margin-right: 4.4rem;
-  font-weight: 700;
-`;
+  height: 100%;
+`
 
 class Navbar extends Component {
   render() {
@@ -26,15 +23,15 @@ class Navbar extends Component {
       <div className={navbar}>
         <img src={logoBlack} alt="WayBase" />
         <div className={navigation}>
-          <div className={navItem}>Organisations</div>
-          <div className={navItem}>Influencers</div>
-          <div className={navItem}>Events</div>
-          <div className={navItem}>Goals</div>
+          <Link to="/organisations">Organisations</Link>
+          <Link to="/influencers">Influencers</Link>
+          <Link to="/events">Events</Link>
+          <Link to="/goals">Goals</Link>
         </div>
         <button>Join</button>
         <div>[avatar]</div>
       </div>
-    );
+    )
   }
 }
 
