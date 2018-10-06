@@ -1,0 +1,32 @@
+{
+  "extends": [
+    "react-app",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
+    "plugin:import/errors"
+  ],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "soruceType": "module",
+    "emcaFeatures": {
+      "impliedStrict": true
+    }
+  },
+  "rules": {
+    "prettier/prettier": ["warn", { "semi": false }],
+    "no-console": ["warn"],
+    "object-shorthand": ["warn"],
+    "import/order": [
+      "warn",
+      {
+        "newlines-between": "always",
+        "groups": [ "builtin", "external", [ "internal", "parent", "sibling", "index" ] ]
+      }
+    ],
+    "no-var": ["warn"],
+    "semi": ["warn", "never"]
+  },
+  "plugins": ["import", "prettier", "react"]
+}
