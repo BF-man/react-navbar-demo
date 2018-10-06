@@ -1,5 +1,6 @@
-import React, { Component } from 'react'
-import { css } from 'emotion'
+import React, { Component } from "react"
+import { css } from "emotion"
+
 import { colors } from "../../../../variables"
 
 const search = css`
@@ -30,11 +31,11 @@ const textInput = css`
 
 const categoryInput = css`
   width: 16.4rem;
-`;
+`
 
 const placeInput = css`
   width: 16.4rem;
-`;
+`
 
 const button = css`
   width: 5.4rem;
@@ -43,19 +44,23 @@ const button = css`
   display: flex;
   align-items: center;
   justify-content: center;
-`;
+`
 
 class SearchInput extends Component {
   render() {
     return (
       <div className={search}>
         <input className={textInput} placeholder="Search for anything..." />
-        <select className={categoryInput}><option>Category</option></select>
-        <select className={placeInput}><option>Category, AB [ICON]</option></select>
+        <select className={categoryInput}>
+          <option>Category</option>
+        </select>
+        <select className={placeInput}>
+          <option>Category, AB [ICON]</option>
+        </select>
         <div className={button}>[search icon]</div>
       </div>
-    );
+    )
   }
 }
 
-export default SearchInput;
+export default SearchInput

@@ -1,7 +1,8 @@
-import React, { Component } from 'react'
+import React, { Component } from "react"
 import { NavLink } from "react-router-dom"
-import { css } from 'emotion'
-import { colors } from '../../../../variables'
+import { css } from "emotion"
+
+import { colors } from "../../../../variables"
 
 const active = css`
   &::after {

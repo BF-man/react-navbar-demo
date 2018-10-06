@@ -1,7 +1,8 @@
-import React, { Component } from 'react'
+import React, { Component } from "react"
+import { css } from "emotion"
+
 import { Link } from "./components/Link"
-import logoBlack from './images/logo-black.png'
-import { css } from 'emotion'
+import logoBlack from "./images/logo-black.png"
 
 const navbar = css`
   display: flex;
@@ -35,4 +36,4 @@ class Navbar extends Component {
   }
 }
 
-export default Navbar;
+export default Navbar

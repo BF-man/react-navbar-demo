@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
-import { css } from 'emotion'
+import React, { Component } from "react"
+import { css } from "emotion"
+
 import background from "./images/background.jpg"
-import SearchInput from './components/SearchInput';
+import SearchInput from "./components/SearchInput"
 import { colors } from "../../variables"
 
 const search = css`
   padding: 16.1rem 0 20.5rem 0;
-  background-image: linear-gradient(${colors.gray2},${colors.gray2}),
-    linear-gradient(${colors.gray3},${colors.gray3}),
-    url(${background});
+  background-image: linear-gradient(${colors.gray2}, ${colors.gray2}),
+    linear-gradient(${colors.gray3}, ${colors.gray3}), url(${background});
 `
 
 const title = css`
@@ -21,7 +21,7 @@ const inputContainer = css`
   & > * {
     margin: 0 auto;
   }
-`;
+`
 
 class Search extends Component {
   render() {
@@ -29,14 +29,15 @@ class Search extends Component {
       <div className={search}>
         <div className={title}>
           Doming consetetur conclusionemque
-          <br/>
-          vis ex, te duo odio accumsan.</div>
+          <br />
+          vis ex, te duo odio accumsan.
+        </div>
         <div className={inputContainer}>
           <SearchInput />
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default Search;
+export default Search
