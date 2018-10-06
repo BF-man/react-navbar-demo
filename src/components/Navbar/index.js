@@ -1,25 +1,35 @@
 import React, { Component } from 'react';
-import logoBlack from './images/logo-black.svg';
+import logoBlack from './images/logo-black.png';
 import { css } from 'emotion'
 
 const navbar = css`
   display: flex;
+  max-width: 113.3rem;
+  margin: 0 auto;
+  align-items: center;
+  height: 4.5rem;
 `;
 
 const navigation = css`
-display: flex;
+  display: flex;
+  margin: 0 auto 0 7.8rem;
+`;
+
+const navItem = css`
+  margin-right: 4.4rem;
+  font-weight: 700;
 `;
 
 class Navbar extends Component {
   render() {
     return (
       <div className={navbar}>
-        <img src={logoBlack} />
+        <img src={logoBlack} alt="WayBase" />
         <div className={navigation}>
-          <div>Organisations</div>
-          <div>Influencers</div>
-          <div>Events</div>
-          <div>Goals</div>
+          <div className={navItem}>Organisations</div>
+          <div className={navItem}>Influencers</div>
+          <div className={navItem}>Events</div>
+          <div className={navItem}>Goals</div>
         </div>
         <button>Join</button>
         <div>[avatar]</div>
