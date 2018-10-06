@@ -19,7 +19,7 @@ const title = css`
 
 const inputContainer = css`
   & > * {
-    margin: 0 auto;
+    margin: 5.1rem auto 0;
   }
 `
 

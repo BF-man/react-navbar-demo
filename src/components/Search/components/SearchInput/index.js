@@ -1,63 +1,55 @@
 import React, { Component } from "react"
-import { css } from "emotion"
+import Select, { components } from "react-select"
 
-import { colors } from "../../../../variables"
+import targetIcon from "./images/targetIcon.svg"
+import searchIcon from "./images/searchIcon.svg"
+import { search, textInput, select, button } from "./styles"
 
-const search = css`
-  display: flex;
-  flex-wrap: nowrap;
-  width: 74.5rem;
-  height: 5.4rem;
-  background-color: ${colors.white};
-  border-radius: 2px;
-
-  & > * {
-    border-radius: 2px;
-    height: 100%;
-    font-weight: 700;
+const places = [
+  {
+    value: "calgary",
+    label: "Calgary, AB"
+  },
+  {
+    value: "quebec",
+    label: "Quebec"
+  },
+  {
+    value: "goderich",
+    label: "Goderich"
   }
-`
+]
 
-const textInput = css`
-  flex: 1;
-  border: none;
-  padding: 1.4rem 2rem;
-
-  &::placeholder {
-    opacity: 0.5;
-    color: ${colors.gray};
-  }
-`
-
-const categoryInput = css`
-  width: 16.4rem;
-`
-
-const placeInput = css`
-  width: 16.4rem;
-`
-
-const button = css`
-  width: 5.4rem;
-  background-color: ${colors.blue};
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`
+const DropdownIndicator = props => {
+  return (
+    components.DropdownIndicator && (
+      <components.DropdownIndicator {...props}>
+        <img src={targetIcon} alt="target" />
+      </components.DropdownIndicator>
+    )
+  )
+}
 
 class SearchInput extends Component {
   render() {
     return (
       <div className={search}>
         <input className={textInput} placeholder="Search for anything..." />
-        <select className={categoryInput}>
-          <option>Category</option>
-        </select>
-        <select className={placeInput}>
-          <option>Category, AB [ICON]</option>
-        </select>
-        <div className={button}>[search icon]</div>
+        <Select
+          className={select}
+          classNamePrefix={select}
+          placeholder="Category"
+        />
+        <Select
+          className={select}
+          classNamePrefix={select}
+          components={{ DropdownIndicator }}
+          options={places}
+          defaultValue={places[0]}
+        />
+        <div className={button}>
+          <img src={searchIcon} alt="search" />
+        </div>
       </div>
     )
   }
