@@ -1,23 +1,10 @@
 import React, { Component } from "react"
-import { css } from "emotion"
 
+import { Button } from "../Button"
 import { Link } from "./components/Link"
 import logoBlack from "./images/logo-black.png"
-
-const navbar = css`
-  display: flex;
-  max-width: 113.3rem;
-  margin: 0 auto;
-  align-items: center;
-  height: 4.5rem;
-`
-
-const navigation = css`
-  display: flex;
-  margin: 0 auto 0 7.8rem;
-  height: 100%;
-`
-
+import avatarImage from "./images/avatar.png"
+import { navigation, navbar, avatar } from "./styles"
 class Navbar extends Component {
   render() {
     return (
@@ -29,8 +16,8 @@ class Navbar extends Component {
           <Link to="/events">Events</Link>
           <Link to="/goals">Goals</Link>
         </div>
-        <button>Join</button>
-        <div>[avatar]</div>
+        <Button>Join</Button>
+        <img className={avatar} src={avatarImage} alt="avatar" />
       </div>
     )
   }
