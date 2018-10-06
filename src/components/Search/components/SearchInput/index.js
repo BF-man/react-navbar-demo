@@ -1,12 +1,13 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import { css } from 'emotion'
+import { colors } from "../../../../variables"
 
 const search = css`
   display: flex;
   flex-wrap: nowrap;
   width: 74.5rem;
   height: 5.4rem;
-  background-color: white;
+  background-color: ${colors.white};
   border-radius: 2px;
 
   & > * {
@@ -23,7 +24,7 @@ const textInput = css`
 
   &::placeholder {
     opacity: 0.5;
-    color: #434343;
+    color: ${colors.gray};
   }
 `
 
@@ -37,7 +38,7 @@ const placeInput = css`
 
 const button = css`
   width: 5.4rem;
-  background-color: #1dc1dd;
+  background-color: ${colors.blue};
   cursor: pointer;
   display: flex;
   align-items: center;
