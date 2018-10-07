@@ -11,5 +11,5 @@ export const StyledHeader = styled("div")`
 `
 
 export const Spacer = styled("div")`
-  height: calc(${({ isExpanded }) => (isExpanded ? 63.2 : 13)}rem + 1rem);
+  height: ${({ isExpanded }) => (isExpanded ? 63.2 : 13)}rem;
 `

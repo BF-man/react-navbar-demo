@@ -3,7 +3,7 @@ import { bool } from "prop-types"
 
 import { SearchInput } from "./components/SearchInput"
 import { SearchContainer, InputContainer } from "./animations"
-import { titleCN, inputContainerCN } from "./styles"
+import { titleCN, inputContainerCN, ChangeLocationButton } from "./styles"
 
 export class Search extends Component {
   static propTypes = {
@@ -25,6 +25,9 @@ export class Search extends Component {
         <InputContainer className={inputContainerCN} pose={pose}>
           <SearchInput theme={isExpanded ? "blue" : "dark"} />
         </InputContainer>
+        {isExpanded ? (
+          <ChangeLocationButton>Change Location</ChangeLocationButton>
+        ) : null}
       </SearchContainer>
     )
   }
