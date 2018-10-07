@@ -40,6 +40,7 @@ export const select = css`
     border-left: 1px dashed #979797;
     height: 3.7rem;
     width: 100%;
+    border-radius: 0;
   }
 
   &__control > &__value-container {
