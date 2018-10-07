@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import { NavLink } from "react-router-dom"
-import { css } from "emotion"
+import { css } from "react-emotion"
 
 import { colors } from "../../../../variables"
 

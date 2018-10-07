@@ -5,7 +5,7 @@ import { Link } from "./components/Link"
 import logoBlack from "./images/logo-black.png"
 import avatarImage from "./images/avatar.png"
 import { navigation, navbar, avatar } from "./styles"
-class Navbar extends Component {
+export class Navbar extends Component {
   render() {
     return (
       <div className={navbar}>
@@ -22,5 +22,3 @@ class Navbar extends Component {
     )
   }
 }
-
-export default Navbar

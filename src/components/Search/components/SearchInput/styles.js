@@ -1,4 +1,4 @@
-import { css } from "emotion"
+import styled, { css } from "react-emotion"
 
 import { colors } from "../../../../variables"
 
@@ -47,7 +47,7 @@ export const select = css`
   }
 
   &__value-container > &__placeholder {
-    color: ${colors.gray}
+    color: ${colors.gray};
   }
 
   &__indicators > &__indicator-separator {
@@ -72,9 +72,10 @@ export const select = css`
   }
 `
 
-export const button = css`
+export const Button = styled("div")`
   width: 5.4rem;
-  background-color: ${colors.blue};
+  background-color: ${({ theme }) =>
+    theme === "blue" ? colors.blue : colors.gray};
   cursor: pointer;
   display: flex;
   align-items: center;

@@ -2,17 +2,14 @@ import React, { Component } from "react"
 import { Route } from "react-router-dom"
 
 import Blank from "./pages/Blank"
-import Navbar from "./components/Navbar"
-import Search from "./components/Search"
+import { Layout } from "./components/Layout"
 
 class App extends Component {
   render() {
     return (
-      <div>
-        <Navbar />
-        <Search />
+      <Layout>
         <Route component={Blank} />
-      </div>
+      </Layout>
     )
   }
 }

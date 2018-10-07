@@ -1,43 +1,31 @@
 import React, { Component } from "react"
-import { css } from "emotion"
+import { bool } from "prop-types"
 
-import background from "./images/background.jpg"
-import SearchInput from "./components/SearchInput"
-import { colors } from "../../variables"
+import { SearchInput } from "./components/SearchInput"
+import { SearchContainer, InputContainer } from "./animations"
+import { titleCN, inputContainerCN } from "./styles"
 
-const search = css`
-  padding: 16.1rem 0 20.5rem 0;
-  background-image: linear-gradient(${colors.gray2}, ${colors.gray2}),
-    linear-gradient(${colors.gray3}, ${colors.gray3}), url(${background});
-`
-
-const title = css`
-  font-size: 4.8rem;
-  font-weight: 700;
-  text-align: center;
-`
-
-const inputContainer = css`
-  & > * {
-    margin: 5.1rem auto 0;
+export class Search extends Component {
+  static propTypes = {
+    isExpanded: bool.isRequired
   }
-`
 
-class Search extends Component {
   render() {
+    const { isExpanded } = this.props
+    const pose = isExpanded ? "expanded" : "collapsed"
     return (
-      <div className={search}>
-        <div className={title}>
-          Doming consetetur conclusionemque
-          <br />
-          vis ex, te duo odio accumsan.
-        </div>
-        <div className={inputContainer}>
-          <SearchInput />
-        </div>
-      </div>
+      <SearchContainer pose={pose}>
+        {isExpanded ? (
+          <div className={titleCN} pose={pose}>
+            Doming consetetur conclusionemque
+            <br />
+            vis ex, te duo odio accumsan.
+          </div>
+        ) : null}
+        <InputContainer className={inputContainerCN} pose={pose}>
+          <SearchInput theme={isExpanded ? "blue" : "dark"} />
+        </InputContainer>
+      </SearchContainer>
     )
   }
 }
-
-export default Search

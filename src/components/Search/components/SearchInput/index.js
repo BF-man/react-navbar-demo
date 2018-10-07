@@ -1,9 +1,12 @@
 import React, { Component } from "react"
 import Select, { components } from "react-select"
+import { oneOf } from "prop-types"
 
 import targetIcon from "./images/targetIcon.svg"
 import searchIcon from "./images/searchIcon.svg"
-import { search, textInput, select, button } from "./styles"
+import { search, textInput, select, Button } from "./styles"
+
+const THEMES = ["blue", "dark"]
 
 const places = [
   {
@@ -30,8 +33,18 @@ const DropdownIndicator = props => {
   )
 }
 
-class SearchInput extends Component {
+export class SearchInput extends Component {
+  static propTypes = {
+    theme: oneOf(THEMES)
+  }
+
+  static defaultProps = {
+    theme: THEMES[0]
+  }
+
   render() {
+    const { theme } = this.props
+
     return (
       <div className={search}>
         <input className={textInput} placeholder="Search for anything..." />
@@ -47,12 +60,10 @@ class SearchInput extends Component {
           options={places}
           defaultValue={places[0]}
         />
-        <div className={button}>
+        <Button theme={theme}>
           <img src={searchIcon} alt="search" />
-        </div>
+        </Button>
       </div>
     )
   }
 }
-
-export default SearchInput

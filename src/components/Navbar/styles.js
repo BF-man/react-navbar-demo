@@ -1,8 +1,8 @@
-import { css } from "emotion"
+import { css } from "react-emotion"
 
 export const navbar = css`
   display: flex;
-  max-width: 113.3rem;
+  max-width: 113.4rem;
   margin: 0 auto;
   align-items: center;
   height: 4.5rem;
