@@ -12,4 +12,9 @@ export const button = css`
   display: inline-flex;
   align-items: center;
   cursor: pointer;
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 0.87;
+  }
 `

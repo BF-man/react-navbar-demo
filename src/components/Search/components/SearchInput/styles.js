@@ -81,4 +81,10 @@ export const Button = styled("div")`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 0.87;
+  }
 `
