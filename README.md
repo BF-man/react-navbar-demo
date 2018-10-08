@@ -1,4 +1,4 @@
-Test react application with animated navbar and basic responsive design.
+Test react application with animated navbar and basic responsive design(desktop only).
 
 See demo https://bf-man.github.io/react-navbar-demo/
 
