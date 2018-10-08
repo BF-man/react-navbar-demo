@@ -1,5 +1,6 @@
 import styled, { css } from "react-emotion"
 
+import { SearchContainer } from "./animations"
 import { colors, media } from "../../variables"
 
 export const titleCN = css`
@@ -32,9 +33,15 @@ export const ChangeLocationButton = styled("div")`
   padding: 0 10.5rem;
   cursor: pointer;
 `
-
-export const searchContainerCN = css`
+export const StyledAnimatedSearchContainer = styled(SearchContainer)`
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  position: ${({ isExpanded }) => (isExpanded ? "static" : "fixed")};
+  width: 100%;
+  overflow: hidden;
+`
+
+export const Spacer = styled("div")`
+  height: 40rem;
 `
