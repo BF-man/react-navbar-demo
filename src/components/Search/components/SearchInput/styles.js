@@ -41,6 +41,7 @@ export const select = css`
     height: 3.7rem;
     width: 100%;
     border-radius: 0;
+    cursor: pointer;
   }
 
   &__control > &__value-container {
