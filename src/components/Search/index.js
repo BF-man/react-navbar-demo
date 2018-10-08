@@ -2,8 +2,13 @@ import React, { Component } from "react"
 import { bool } from "prop-types"
 
 import { SearchInput } from "./components/SearchInput"
-import { SearchContainer, InputContainer } from "./animations"
-import { titleCN, inputContainerCN, ChangeLocationButton } from "./styles"
+import { SearchContainer } from "./animations"
+import {
+  titleCN,
+  ChangeLocationButton,
+  InputContainer,
+  searchContainerCN
+} from "./styles"
 
 export class Search extends Component {
   static propTypes = {
@@ -14,7 +19,7 @@ export class Search extends Component {
     const { isExpanded } = this.props
     const pose = isExpanded ? "expanded" : "collapsed"
     return (
-      <SearchContainer pose={pose}>
+      <SearchContainer className={searchContainerCN} pose={pose}>
         {isExpanded ? (
           <div className={titleCN} pose={pose}>
             Doming consetetur conclusionemque
@@ -22,7 +27,7 @@ export class Search extends Component {
             vis ex, te duo odio accumsan.
           </div>
         ) : null}
-        <InputContainer className={inputContainerCN} pose={pose}>
+        <InputContainer isExpanded={isExpanded}>
           <SearchInput theme={isExpanded ? "blue" : "dark"} />
         </InputContainer>
         {isExpanded ? (

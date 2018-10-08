@@ -16,15 +16,6 @@ export const SearchContainer = posed.div({
   collapsed: {
     padding: "1.4rem 0 1.7rem 0",
     backgroundImage: `linear-gradient(${colors.blue}, ${colors.blue}),
-    linear-gradient(${colors.gray3}, ${colors.gray3}), ${background}`,
-  }
-})
-
-export const InputContainer = posed.div({
-  expanded: {
-    maxWidth: "74.5rem"
-  },
-  collapsed: {
-    maxWidth: "113.4rem"
+    linear-gradient(${colors.gray3}, ${colors.gray3}), ${background}`
   }
 })

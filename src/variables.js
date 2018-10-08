@@ -6,3 +6,7 @@ export const colors = {
   gray3: "rgba(255,255,255,0.60)",
   blue: "rgba(29, 193, 221, 1)"
 }
+
+export const media = {
+  medium: "max-width: 1200px"
+}

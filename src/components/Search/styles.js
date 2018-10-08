@@ -1,6 +1,6 @@
 import styled, { css } from "react-emotion"
 
-import { colors } from "../../variables"
+import { colors, media } from "../../variables"
 
 export const titleCN = css`
   font-size: 4.8rem;
@@ -9,8 +9,17 @@ export const titleCN = css`
   margin-bottom: 5.1rem;
 `
 
-export const inputContainerCN = css`
+export const InputContainer = styled("div")`
+  max-width: 113.4rem;
   margin: 0 auto;
+  transform: translate(
+    ${({ isExpanded }) => (isExpanded ? "calc((100% - 74rem)/2)" : "0")}
+  );
+  transition: transform 0.5s;
+
+  @media (${media.medium}) {
+    max-width: 80rem;
+  }
 `
 
 export const ChangeLocationButton = styled("div")`
@@ -22,4 +31,10 @@ export const ChangeLocationButton = styled("div")`
   margin: 0.7rem auto 0;
   padding: 0 10.5rem;
   cursor: pointer;
+`
+
+export const searchContainerCN = css`
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 `
