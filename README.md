@@ -1,5 +1,7 @@
 Test react application with animated navbar and basic responsive design.
 
+See demo https://bf-man.github.io/react-navbar-demo/
+
 ## Pre-requirements
   - node 10.5.0
   - yarn
